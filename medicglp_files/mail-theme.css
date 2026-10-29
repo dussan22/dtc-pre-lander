@@ -204,7 +204,42 @@ section p{
   font-size:1rem;
   font-size:19px;
 }
-.urgency .text-rail{background:transparent;border-radius:0;box-shadow:none}
+.urgency{
+  background:#edf7fc!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+  overflow:visible!important;
+}
+.cta-box{
+  background-color:#ffffff;
+  border-radius:12px;
+  padding:24px;
+  border:1px solid #e2e8f0;
+  margin:30px 0;
+  box-shadow:0 2px 4px rgba(0,0,0,0.05);
+}
+.cta-box h2{margin-top:0}
+.cta-box .text-rail{
+  background:transparent!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  margin-bottom:16px;
+}
+/* Strip pill/bubble sentence highlights from style.css .urgency p */
+.urgency p,
+.cta-box p,
+.cta-box .text-rail p{
+  background:transparent!important;
+  background-color:transparent!important;
+  display:block!important;
+  padding:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  margin:0 0 12px!important;
+  font-weight:400!important;
+  color:#333!important;
+}
+.cta-box .text-rail p:last-child{margin-bottom:0!important}
 
 .proof{background:#fff}
 .proof h2{font-size:28px;color:#004db3;font-weight:700;line-height:1.25;margin:16px 0 10px;padding:0}
