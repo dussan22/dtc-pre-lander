@@ -24,9 +24,9 @@ body>section,body>.footer{max-width:964px;margin:0 auto;border-radius:0;box-shad
 .hero{text-align:left;background:white}
 .hero:after,.problem:before,.discovery:before,.urgency:after,.plans:before{display:none}
 .hero h1{font-size:36px;line-height:1.2;color:#111;font-weight:800;letter-spacing:-.6px;margin:0 0 16px}
-.hero .subhead{font-size:19px;line-height:1.6;color:#333;margin:0 0 0 2px;padding:0 0 12px 14px;display:block;background:transparent;border-left:3px solid #cbd5e1;box-shadow:none}
-.hero .subhead.spoiler{margin:0 0 0 2px;padding:0 0 12px 14px;background:transparent;border-left:3px solid #cbd5e1;line-height:1.6}
-.hero .subhead:last-child{padding-bottom:0}
+.hero .subhead{font-size:19px;line-height:1.6;color:#333;margin:0 0 12px;padding:0;display:block;background:transparent;border:0;box-shadow:none}
+.hero .subhead.spoiler{margin:0 0 12px;padding:0;background:transparent;border:0;line-height:1.6}
+.hero .text-rail .subhead:last-child{margin-bottom:0}
 .hero .highlights{display:block;margin:0;padding:12px 0;border-top:1px solid #ddd}
 .hero .highlights li{display:block;max-width:none;width:auto;color:#004db3;font-weight:700;font-size:16px;padding-left:18px}
 .hero .highlights li:before{content:'•';color:#00a9ce}
@@ -35,22 +35,43 @@ body>section,body>.footer{max-width:964px;margin:0 auto;border-radius:0;box-shad
 h1,h2,h3{border-left:0!important;padding-left:0}
 h2{line-height:1.25;color:#004db3;font-weight:700;margin:16px 0 10px;font-size:28px}
 
-/* Body paragraphs: continuous left accent rail (padding, not margin, keeps line unbroken) */
-section p{
-  margin:0 0 0 2px;
-  padding:0 0 12px 14px;
+/*
+  Continuous left accent rail:
+  ONE border on .text-rail wrapping consecutive paragraphs.
+  Breaks only for images, headings, lists, and callout cards.
+*/
+.text-rail{
+  border-left:3px solid #cbd5e1;
+  padding-left:14px;
+  margin:0 0 12px 2px;
+}
+.text-rail p{
+  margin:0 0 12px;
+  padding:0;
+  border-left:none;
+  margin-left:0;
+  padding-left:0;
   line-height:1.6;
   display:block;
   font-size:19px;
-  border-left:3px solid #cbd5e1;
   background:transparent;
 }
-.doctor-text p{margin:0 0 0 2px;padding:0 0 12px 14px;line-height:1.6;display:block;font-size:19px;border-left:3px solid #cbd5e1}
-.doctor-text p:last-child{padding-bottom:0}
-/* Pause accent on light-blue sections, captions, cards, CTAs */
-.research-intro p,
-.urgency p,
-.plans p,
+.text-rail p:last-child{margin-bottom:0}
+
+section p{
+  margin:0 0 12px;
+  padding:0;
+  line-height:1.6;
+  display:block;
+  font-size:19px;
+  border-left:none;
+  background:transparent;
+}
+.doctor-text p{margin:0 0 12px;padding:0;line-height:1.6;display:block;font-size:19px;border-left:none}
+.doctor-text.text-rail p:last-child,
+.doctor-text p:last-child{margin-bottom:0}
+
+/* No rail on captions, cards, compare/footer legal copy */
 .ba-caption,
 .footer p,
 .compare p,
@@ -58,12 +79,6 @@ section p{
   border-left:none;
   padding-left:0;
   margin-left:0;
-}
-.research-intro p,
-.urgency p,
-.plans p{
-  margin:0 0 12px;
-  padding:0 0 0 0;
 }
 .btn-primary,.btn-secondary{background:#004db3;color:white!important;animation:none;border-radius:3px;text-decoration:none!important}
 .btn-primary:hover,.btn-secondary:hover{background:#003780}
@@ -74,7 +89,7 @@ section p{
 .urgency h2,.plans h2,.beforeafter h2,.precision h2,.visceral-danger h2{text-align:left}
 .footer{background:#f0f7fb;border-top:3px solid #00afd0}
 #endPromotionTimer{color:#004db3!important}
-.problem .highlight{background:transparent;font-weight:600;color:#004db3}
+.problem .highlight{background:transparent;font-weight:600;color:#004db3;margin-top:0!important}
 
 @media(max-width:1000px){.mail-header,body>section,body>.footer{width:calc(100% - 32px)}.mail-primary{gap:8px}.mail-secondary{justify-content:flex-start}.mail-secondary a{flex-shrink:0}}
 @media(max-width:600px){
@@ -106,7 +121,9 @@ section p{
 /* Research intro */
 .research-intro{background:#f1f8fc;border-top:3px solid #00a9ce!important}
 .research-intro h2{font-size:28px;font-weight:700;line-height:1.2;margin:8px 0 6px}
-.research-intro p{margin:0 0 12px;padding:0;line-height:1.6;display:block;font-size:19px;border-left:none}
+.research-intro .text-rail{margin-top:0;margin-bottom:12px}
+.research-intro .text-rail p{margin:0 0 12px;padding:0;line-height:1.6;display:block;font-size:19px;border-left:none}
+.research-intro .text-rail p:last-child{margin-bottom:0}
 .research-label{font-size:12px;font-weight:700;letter-spacing:.8px;color:#004db3}
 .research-disclosure{font-size:13px;padding:12px;border-left:3px solid #00a9ce;background:white;color:#435263}
 .research-ingredient{margin:18px 0;padding:14px 18px;border-left:3px solid #00a9ce;background:#e8f5fc;color:#004db3}
@@ -131,8 +148,9 @@ section p{
 .profile-frame{border:1px solid #d1d5db;background-color:#f9fafb;padding:20px;border-radius:8px;margin:12px 0 20px}
 .profile-frame .doctor__wrap{gap:20px;align-items:flex-start}
 .profile-frame .story-ba{width:100%;max-width:320px;height:auto;display:block;margin:0;min-width:0;border-radius:6px}
-.profile-frame .doctor-text p{margin:0 0 0 2px;padding:0 0 12px 14px;line-height:1.6;display:block;border-left:3px solid #cbd5e1}
-.profile-frame .doctor-text p:last-child{padding-bottom:0}
+.profile-frame .doctor-text.text-rail{margin:0}
+.profile-frame .doctor-text p{margin:0 0 12px;padding:0;line-height:1.6;display:block;border-left:none}
+.profile-frame .doctor-text p:last-child{margin-bottom:0}
 
 /* Images: responsive + tighter margins — breaks the accent rail */
 .article-img{
@@ -174,8 +192,8 @@ section p{
 
 .proof{background:#fff}
 .proof h2{font-size:28px;color:#004db3;font-weight:700;line-height:1.25;margin:16px 0 10px;padding:0}
-.proof p{font-size:19px;line-height:1.6;color:#333;max-width:760px;margin:0 0 0 2px;padding:0 0 12px 14px;display:block;border-left:3px solid #cbd5e1}
-.proof p:last-child{padding-bottom:0}
+.proof .text-rail p{font-size:19px;line-height:1.6;color:#333;max-width:760px;margin:0 0 12px;padding:0;display:block;border-left:none}
+.proof .text-rail p:last-child{margin-bottom:0}
 .proof .article-img{max-width:900px}
 .discovery-story .article-img{max-width:1080px}
 .discovery-story .blue-line-heading{color:#004db3;font-weight:700;line-height:1.2;margin:8px 0 6px}
