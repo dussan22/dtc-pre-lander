@@ -24,8 +24,9 @@ body>section,body>.footer{max-width:964px;margin:0 auto;border-radius:0;box-shad
 .hero{text-align:left;background:white}
 .hero:after,.problem:before,.discovery:before,.urgency:after,.plans:before{display:none}
 .hero h1{font-size:36px;line-height:1.2;color:#111;font-weight:800;letter-spacing:-.6px;margin:0 0 16px}
-.hero .subhead{font-size:19px;line-height:1.6;color:#333;margin:0 0 12px;padding:0;display:block;background:transparent;border:0;box-shadow:none}
-.hero .subhead.spoiler{margin:0 0 12px;padding-left:14px;background:transparent;border-left:3px solid #cbd5e1;line-height:1.6}
+.hero .subhead{font-size:19px;line-height:1.6;color:#333;margin:0 0 0 2px;padding:0 0 12px 14px;display:block;background:transparent;border-left:3px solid #cbd5e1;box-shadow:none}
+.hero .subhead.spoiler{margin:0 0 0 2px;padding:0 0 12px 14px;background:transparent;border-left:3px solid #cbd5e1;line-height:1.6}
+.hero .subhead:last-child{padding-bottom:0}
 .hero .highlights{display:block;margin:0;padding:12px 0;border-top:1px solid #ddd}
 .hero .highlights li{display:block;max-width:none;width:auto;color:#004db3;font-weight:700;font-size:16px;padding-left:18px}
 .hero .highlights li:before{content:'•';color:#00a9ce}
@@ -34,25 +35,35 @@ body>section,body>.footer{max-width:964px;margin:0 auto;border-radius:0;box-shad
 h1,h2,h3{border-left:0!important;padding-left:0}
 h2{line-height:1.25;color:#004db3;font-weight:700;margin:16px 0 10px;font-size:28px}
 
-/* Body paragraphs only: left grey accent + tighter spacing */
+/* Body paragraphs: continuous left accent rail (padding, not margin, keeps line unbroken) */
 section p{
-  margin:0 0 12px;
+  margin:0 0 0 2px;
+  padding:0 0 12px 14px;
   line-height:1.6;
   display:block;
   font-size:19px;
   border-left:3px solid #cbd5e1;
-  padding-left:14px;
-  margin-left:2px;
   background:transparent;
 }
-.doctor-text p{margin-top:0;margin-bottom:12px;line-height:1.6;display:block;font-size:19px}
-.doctor-text p:last-child{margin-bottom:0}
+.doctor-text p{margin:0 0 0 2px;padding:0 0 12px 14px;line-height:1.6;display:block;font-size:19px;border-left:3px solid #cbd5e1}
+.doctor-text p:last-child{padding-bottom:0}
+/* Pause accent on light-blue sections, captions, cards, CTAs */
+.research-intro p,
+.urgency p,
+.plans p,
 .ba-caption,
 .footer p,
-.compare p{
+.compare p,
+.testimonial-card p{
   border-left:none;
   padding-left:0;
   margin-left:0;
+}
+.research-intro p,
+.urgency p,
+.plans p{
+  margin:0 0 12px;
+  padding:0 0 0 0;
 }
 .btn-primary,.btn-secondary{background:#004db3;color:white!important;animation:none;border-radius:3px;text-decoration:none!important}
 .btn-primary:hover,.btn-secondary:hover{background:#003780}
@@ -94,8 +105,8 @@ section p{
 
 /* Research intro */
 .research-intro{background:#f1f8fc;border-top:3px solid #00a9ce!important}
-.research-intro h2{font-size:28px;font-weight:700;line-height:1.25;margin:16px 0 10px}
-.research-intro p{margin-bottom:12px;line-height:1.6;display:block;font-size:19px}
+.research-intro h2{font-size:28px;font-weight:700;line-height:1.2;margin:8px 0 6px}
+.research-intro p{margin:0 0 12px;padding:0;line-height:1.6;display:block;font-size:19px;border-left:none}
 .research-label{font-size:12px;font-weight:700;letter-spacing:.8px;color:#004db3}
 .research-disclosure{font-size:13px;padding:12px;border-left:3px solid #00a9ce;background:white;color:#435263}
 .research-ingredient{margin:18px 0;padding:14px 18px;border-left:3px solid #00a9ce;background:#e8f5fc;color:#004db3}
@@ -107,12 +118,12 @@ section p{
 
 /* Story rewrite layout helpers */
 .blue-line-heading{
-  padding:0 0 10px;
+  padding:0 0 8px;
   border-bottom:3px solid #00a9ce;
-  margin:16px 0 10px;
+  margin:8px 0 6px;
   background:transparent;
   font-weight:700;
-  line-height:1.25;
+  line-height:1.2;
   color:#004db3;
 }
 .story-author{padding-top:10px!important}
@@ -120,10 +131,10 @@ section p{
 .profile-frame{border:1px solid #d1d5db;background-color:#f9fafb;padding:20px;border-radius:8px;margin:12px 0 20px}
 .profile-frame .doctor__wrap{gap:20px;align-items:flex-start}
 .profile-frame .story-ba{width:100%;max-width:320px;height:auto;display:block;margin:0;min-width:0;border-radius:6px}
-.profile-frame .doctor-text p{margin-top:0;margin-bottom:12px;line-height:1.6;display:block}
-.profile-frame .doctor-text p:last-child{margin-bottom:0}
+.profile-frame .doctor-text p{margin:0 0 0 2px;padding:0 0 12px 14px;line-height:1.6;display:block;border-left:3px solid #cbd5e1}
+.profile-frame .doctor-text p:last-child{padding-bottom:0}
 
-/* Images: responsive + tighter margins */
+/* Images: responsive + tighter margins — breaks the accent rail */
 .article-img{
   display:block;
   width:100%;
@@ -137,21 +148,38 @@ section p{
   box-shadow:0 1px 3px rgba(0,0,0,0.05);
   box-sizing:border-box;
 }
+.article-img.product-shot{
+  max-width:400px;
+  width:100%;
+  display:block;
+  margin:16px auto;
+  border:1px solid #e5e7eb;
+  border-radius:6px;
+}
 .profile-frame .article-img{margin:0;max-width:320px;padding:6px}
-.mechanism-ba{margin:16px 0;padding:0}
-.mechanism-ba .article-img{max-width:520px;margin:16px auto}
-.ba-caption{text-align:center;max-width:520px;margin:0 auto 12px;font-size:15px;color:#444;line-height:1.6;display:block}
+.testimonial-card{
+  background-color:#ffffff;
+  border:1px solid #e2e8f0;
+  border-radius:8px;
+  padding:16px;
+  margin:20px 0;
+  box-shadow:0 1px 3px rgba(0,0,0,0.05);
+}
+.testimonial-card .article-img{max-width:100%;margin:0 auto 12px;border:0;box-shadow:none;padding:0}
+.ba-caption{text-align:center;max-width:520px;margin:0 auto 12px;padding:0;font-size:15px;color:#444;line-height:1.6;display:block;border-left:none}
+.testimonial-card .ba-caption:last-child{margin-bottom:0}
 
 .problem ul,.discovery .ticks{margin:12px 0 16px;padding:8px 0 8px 4px}
 .problem ul li,.discovery .ticks li{margin:10px 0;line-height:1.6;border-left:0;padding-left:28px}
 
 .proof{background:#fff}
 .proof h2{font-size:28px;color:#004db3;font-weight:700;line-height:1.25;margin:16px 0 10px;padding:0}
-.proof p{font-size:19px;line-height:1.6;color:#333;max-width:760px;margin-bottom:12px;display:block}
+.proof p{font-size:19px;line-height:1.6;color:#333;max-width:760px;margin:0 0 0 2px;padding:0 0 12px 14px;display:block;border-left:3px solid #cbd5e1}
+.proof p:last-child{padding-bottom:0}
 .proof .article-img{max-width:900px}
 .discovery-story .article-img{max-width:1080px}
-.discovery-story .blue-line-heading{color:#004db3;font-weight:700;line-height:1.25;margin:16px 0 10px}
-.urgency h2,.plans h2{color:#004db3;font-size:28px;font-weight:700;line-height:1.25;margin:16px 0 10px}
+.discovery-story .blue-line-heading{color:#004db3;font-weight:700;line-height:1.2;margin:8px 0 6px}
+.urgency h2,.plans h2{color:#004db3;font-size:28px;font-weight:700;line-height:1.2;margin:8px 0 6px}
 .compare-card .article-img{margin:0;max-width:100%;padding:6px}
 .footer .article-img{max-width:280px;margin:0 auto 12px;padding:6px}
 .decor-listik{border:0;padding:0;box-shadow:none;background:transparent}
@@ -160,5 +188,5 @@ section p{
   .story-author .doctor__wrap{flex-direction:column}
   .profile-frame .story-ba,.profile-frame .article-img{max-width:100%}
   .article-img{margin:16px auto;padding:6px}
-  .proof h2,.urgency h2,.plans h2,.blue-line-heading,.research-intro h2{font-size:24px;margin:16px 0 10px}
+  .proof h2,.urgency h2,.plans h2,.blue-line-heading,.research-intro h2{font-size:24px;margin:8px 0 6px;line-height:1.2}
 }
