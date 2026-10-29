@@ -8,8 +8,8 @@ body{border-top:2px solid #3d3d3d;color:#171717;background:#fff}
 .mail-account{display:flex;align-items:center;height:100%;gap:0}
 .mail-account>a{padding:0 16px;border-left:1px solid #e0e0e0;white-space:nowrap}
 .mail-account .mail-subscribe{background:#173c83;color:white;border-radius:20px;padding:6px 10px;margin-right:16px;font-size:14px}
-.mail-masthead{height:88px;display:flex;align-items:center;padding-left:5px;width:fit-content}
-.mail-masthead img{display:block;width:336px;height:65px;max-width:100%}
+.mail-masthead{height:56px;display:flex;align-items:center;padding-left:5px;width:fit-content}
+.mail-masthead img{display:block;height:35px;width:auto;max-height:35px;max-width:100%}
 .mail-primary{display:flex;align-items:stretch;justify-content:space-between;border-bottom:1px solid #ddd;overflow-x:auto;scrollbar-width:none;gap:12px}
 .mail-primary a{font-size:14px;white-space:nowrap;font-weight:700;padding:9px 7px 12px;position:relative}
 .mail-primary a.active:after{content:'';height:4px;background:#00afd0;position:absolute;bottom:0;left:7px;right:7px}
@@ -29,8 +29,8 @@ body>section,body>.footer{max-width:964px;margin:0 auto;border-radius:0;box-shad
 .hero .highlights li{display:block;max-width:none;width:auto;color:#004db3;font-weight:700;font-size:16px;padding-left:18px}
 .hero .highlights li:before{content:'•';color:#00a9ce}
 h2{line-height:1.22;color:#004db3}
-p{line-height:1.6}
-.doctor-text p{margin-top:12px}
+p{margin-bottom:1.25rem;line-height:1.6}
+.doctor-text p{margin-top:0}
 .btn-primary,.btn-secondary{background:#004db3;color:white!important;animation:none;border-radius:3px;text-decoration:none!important}
 .btn-primary:hover,.btn-secondary:hover{background:#003780}
 .how .ticks li{background:#004db3;border-radius:3px}
@@ -41,7 +41,7 @@ p{line-height:1.6}
 .footer{background:#f0f7fb;border-top:3px solid #00afd0}
 #endPromotionTimer{color:#004db3!important}
 @media(max-width:1000px){.mail-header,body>section,body>.footer{width:calc(100% - 32px)}.mail-primary{gap:8px}.mail-secondary{justify-content:flex-start}.mail-secondary a{flex-shrink:0}}
-@media(max-width:600px){.mail-header,body>section,body>.footer{width:calc(100% - 24px)}.mail-utility{font-size:11px}.mail-account>a{padding:0 8px}.mail-account .mail-subscribe{font-size:11px;margin-right:6px;padding:5px 8px}.mail-masthead{height:76px}.mail-masthead img{width:280px;height:auto}.mail-primary a{font-size:13px}.mail-secondary{min-height:42px}.mail-secondary a{font-size:12px}.container{padding:0 8px}.hero h1{font-size:28px}.hero .subhead{font-size:17px}.doctor-img{min-width:0;max-width:100%!important}.doctor__wrap>div{min-width:0;width:100%}.visceral-text,.precision-text{min-width:0}.visceral-content,.precision-content{text-align:left}.how .ticks{gap:8px}.mail-account>a:last-child{display:none}body>section{padding:24px 0}.btn{max-width:100%}.urgency .btn,.plans .btn{padding:14px 20px}.beforeafter .slide{width:90%}}
+@media(max-width:600px){.mail-header,body>section,body>.footer{width:calc(100% - 24px)}.mail-utility{font-size:11px}.mail-account>a{padding:0 8px}.mail-account .mail-subscribe{font-size:11px;margin-right:6px;padding:5px 8px}.mail-masthead{height:48px}.mail-masthead img{height:32px;max-height:32px;width:auto}.mail-primary a{font-size:13px}.mail-secondary{min-height:42px}.mail-secondary a{font-size:12px}.container{padding:0 8px}.hero h1{font-size:28px}.hero .subhead{font-size:17px}.doctor-img{min-width:0;max-width:100%!important}.doctor__wrap>div{min-width:0;width:100%}.visceral-text,.precision-text{min-width:0}.visceral-content,.precision-content{text-align:left}.how .ticks{gap:8px}.mail-account>a:last-child{display:none}body>section{padding:24px 0}.btn{max-width:100%}.urgency .btn,.plans .btn{padding:14px 20px}.beforeafter .slide{width:90%}}
 
 /* Additive classroom research introduction; existing styles unchanged. */
 .research-intro{background:#f1f8fc;border-top:3px solid #00a9ce!important}.research-intro h2{font-size:28px;margin-bottom:18px}.research-intro p{margin-bottom:14px;line-height:1.6}.research-label{font-size:12px;font-weight:700;letter-spacing:.8px;color:#004db3}.research-disclosure{font-size:13px;padding:12px;border-left:3px solid #00a9ce;background:white;color:#435263}.research-ingredient{margin:18px 0;padding:14px 18px;border-left:3px solid #00a9ce;background:#e8f5fc;color:#004db3}.research-ingredient small{font-size:13px;color:#435263}@media(max-width:600px){.research-intro h2{font-size:24px}}
@@ -50,14 +50,27 @@ p{line-height:1.6}
 
 /* Story rewrite layout helpers */
 .blue-line-heading{padding-bottom:14px;border-bottom:3px solid #00a9ce;margin-bottom:20px}
-.story-author .doctor-text p{margin-top:0}
-.story-author .story-ba{border-radius:4px;width:100%;height:auto}
+.story-author h2{margin-bottom:8px}
+.profile-frame{border:1px solid #d1d5db;background-color:#f9fafb;padding:20px;border-radius:8px;margin:25px 0}
+.profile-frame .doctor__wrap{gap:20px;align-items:flex-start}
+.profile-frame .story-ba{width:100%;max-width:320px;height:auto;display:block;margin:0;min-width:0;border-radius:6px}
+.profile-frame .doctor-text p{margin-top:0;margin-bottom:0}
+.article-img{display:block;width:100%;max-width:100%;height:auto;margin:20px auto;border:1px solid #e5e7eb;padding:6px;background-color:#ffffff;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.05);box-sizing:border-box}
+.profile-frame .article-img{margin:0;max-width:320px}
+.mechanism-ba .article-img{max-width:520px;margin:24px auto 12px}
+.ba-caption{text-align:center;max-width:520px;margin:0 auto 1.25rem;font-size:15px;color:#444}
 .proof{background:#fff}
 .proof h2{font-size:28px;color:#004db3;margin-bottom:16px}
 .proof p{font-size:17px;line-height:1.6;color:#333;max-width:760px}
+.proof .article-img{max-width:900px}
+.discovery-story .article-img{max-width:1080px}
 .discovery-story .blue-line-heading{color:#004db3}
 .urgency h2,.plans h2{color:#004db3;font-size:28px;font-weight:800}
+.compare-card .article-img{margin:0;max-width:100%}
+.footer .article-img{max-width:280px;margin:0 auto 12px}
+.decor-listik{border:0;padding:0;box-shadow:none;background:transparent}
 @media(max-width:600px){
   .story-author .doctor__wrap{flex-direction:column}
+  .profile-frame .story-ba,.profile-frame .article-img{max-width:100%}
   .proof h2,.urgency h2,.plans h2{font-size:24px}
 }
