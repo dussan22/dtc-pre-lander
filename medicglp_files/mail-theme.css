@@ -204,16 +204,7 @@ section p{
   font-size:1rem;
   font-size:19px;
 }
-.cta-copy-card{
-  background-color:#ffffff;
-  border-radius:12px;
-  padding:20px;
-  border:1px solid #e2e8f0;
-  margin-bottom:16px;
-  box-shadow:0 1px 3px rgba(0,0,0,0.05);
-}
-.cta-copy-card h2{margin-top:0}
-.cta-copy-card .text-rail{margin-bottom:0}
+.urgency .text-rail{background:transparent;border-radius:0;box-shadow:none}
 
 .proof{background:#fff}
 .proof h2{font-size:28px;color:#004db3;font-weight:700;line-height:1.25;margin:16px 0 10px;padding:0}
