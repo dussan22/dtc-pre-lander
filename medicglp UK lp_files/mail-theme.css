@@ -1,0 +1,49 @@
+/* Daily Mail reference: white masthead, navy type and cyan rules. */
+*{font-family:Arial,Helvetica,sans-serif}
+body{border-top:2px solid #3d3d3d;color:#171717;background:#fff}
+.mail-header{max-width:964px;margin:0 auto;background:#fff;line-height:1.2}
+.mail-header a{text-decoration:none;color:#101827}
+.mail-utility{height:35px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ddd;font-size:14px}
+.mail-section{border-left:3px solid #00afd0;padding-left:4px;font-weight:700}
+.mail-account{display:flex;align-items:center;height:100%;gap:0}
+.mail-account>a{padding:0 16px;border-left:1px solid #e0e0e0;white-space:nowrap}
+.mail-account .mail-subscribe{background:#173c83;color:white;border-radius:20px;padding:6px 10px;margin-right:16px;font-size:14px}
+.mail-masthead{height:88px;display:flex;align-items:center;padding-left:5px;width:fit-content}
+.mail-masthead img{display:block;width:336px;height:65px;max-width:100%}
+.mail-primary{display:flex;align-items:stretch;justify-content:space-between;border-bottom:1px solid #ddd;overflow-x:auto;scrollbar-width:none;gap:12px}
+.mail-primary a{font-size:14px;white-space:nowrap;font-weight:700;padding:9px 7px 12px;position:relative}
+.mail-primary a.active:after{content:'';height:4px;background:#00afd0;position:absolute;bottom:0;left:7px;right:7px}
+.mail-secondary{display:flex;justify-content:center;align-items:center;min-height:53px;border-bottom:3px solid #00afd0;overflow-x:auto;scrollbar-width:thin;white-space:nowrap}
+.mail-secondary a{font-size:14px;padding:0 8px;border-right:1px solid #ddd;line-height:16px}
+.mail-secondary a:last-child{border:0}
+.mail-header a:hover{color:#007daa}
+.mail-header .mail-subscribe:hover{color:white;background:#004db3}
+a:focus-visible{outline:2px solid #00afd0;outline-offset:3px}
+body>section,body>.footer{max-width:964px;margin:0 auto;border-radius:0;box-shadow:none;border-left:0;border-bottom:1px solid #dce5eb;padding:28px 0}
+.container{max-width:964px;padding:0 20px}
+.hero{text-align:left;background:white}
+.hero:after,.problem:before,.discovery:before,.urgency:after,.plans:before{display:none}
+.hero h1{font-size:36px;line-height:1.12;color:#111;font-weight:800;letter-spacing:-.6px;margin-bottom:18px}
+.hero .subhead{font-size:19px;line-height:1.45;color:#333;margin-bottom:16px}
+.hero .highlights{display:block;margin:0;padding:12px 0;border-top:1px solid #ddd}
+.hero .highlights li{display:block;max-width:none;width:auto;color:#004db3;font-weight:700;font-size:16px;padding-left:18px}
+.hero .highlights li:before{content:'•';color:#00a9ce}
+h2{line-height:1.22;color:#004db3}
+p{line-height:1.6}
+.doctor-text p{margin-top:12px}
+.btn-primary,.btn-secondary{background:#004db3;color:white!important;animation:none;border-radius:3px;text-decoration:none!important}
+.btn-primary:hover,.btn-secondary:hover{background:#003780}
+.how .ticks li{background:#004db3;border-radius:3px}
+.highlight-note{background:#e8f5fc;border-color:#00a9ce;border-radius:0;box-shadow:none}
+.compare-card,.beforeafter .slide{border:1px solid #d9e5ed;border-radius:3px;box-shadow:none}
+.urgency,.plans{text-align:left;background:#edf7fc}
+.urgency h2,.plans h2,.beforeafter h2,.precision h2,.visceral-danger h2{text-align:left}
+.footer{background:#f0f7fb;border-top:3px solid #00afd0}
+#endPromotionTimer{color:#004db3!important}
+@media(max-width:1000px){.mail-header,body>section,body>.footer{width:calc(100% - 32px)}.mail-primary{gap:8px}.mail-secondary{justify-content:flex-start}.mail-secondary a{flex-shrink:0}}
+@media(max-width:600px){.mail-header,body>section,body>.footer{width:calc(100% - 24px)}.mail-utility{font-size:11px}.mail-account>a{padding:0 8px}.mail-account .mail-subscribe{font-size:11px;margin-right:6px;padding:5px 8px}.mail-masthead{height:76px}.mail-masthead img{width:280px;height:auto}.mail-primary a{font-size:13px}.mail-secondary{min-height:42px}.mail-secondary a{font-size:12px}.container{padding:0 8px}.hero h1{font-size:28px}.hero .subhead{font-size:17px}.doctor-img{min-width:0;max-width:100%!important}.doctor__wrap>div{min-width:0;width:100%}.visceral-text,.precision-text{min-width:0}.visceral-content,.precision-content{text-align:left}.how .ticks{gap:8px}.mail-account>a:last-child{display:none}body>section{padding:24px 0}.btn{max-width:100%}.urgency .btn,.plans .btn{padding:14px 20px}.beforeafter .slide{width:90%}}
+
+/* Additive classroom research introduction; existing styles unchanged. */
+.research-intro{background:#f1f8fc;border-top:3px solid #00a9ce!important}.research-intro h2{font-size:28px;margin-bottom:18px}.research-intro p{margin-bottom:14px;line-height:1.6}.research-label{font-size:12px;font-weight:700;letter-spacing:.8px;color:#004db3}.research-disclosure{font-size:13px;padding:12px;border-left:3px solid #00a9ce;background:white;color:#435263}.research-ingredient{margin:18px 0;padding:14px 18px;border-left:3px solid #00a9ce;background:#e8f5fc;color:#004db3}.research-ingredient small{font-size:13px;color:#435263}@media(max-width:600px){.research-intro h2{font-size:24px}}
+
+.classroom-notice{max-width:964px;margin:12px auto;padding:12px 18px;background:#edf7fc;border:1px solid #00a9ce;color:#173c83;font:13px/1.5 Arial,sans-serif}@media(max-width:600px){.classroom-notice{margin:12px}}
