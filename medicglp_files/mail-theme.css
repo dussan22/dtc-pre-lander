@@ -148,10 +148,31 @@ section p{
 .profile-frame{border:1px solid #d1d5db;background-color:#f9fafb;padding:20px;border-radius:8px;margin:12px 0 20px}
 .profile-frame h2{margin:0 0 12px;color:#004db3;font-weight:700;line-height:1.2}
 .author-meta{font-size:16px!important;color:#435263;margin-top:8px!important}
-.safety-block{background:#D5E3F2!important;border-bottom:1px solid #dce5eb}
-.safety-block .container{padding-top:8px;padding-bottom:8px}
-.safety-block .compare-grid{margin:20px 0}
+.safety-block{background:#D5E3F2!important;border-bottom:0}
+.safety-block .container{padding-top:8px;padding-bottom:24px}
+.safety-block .testimonial-card{background:#ffffff;margin:20px 0}
+.safer-heading{
+  border-top:3px solid #00a9ce!important;
+  border-bottom:3px solid #00a9ce!important;
+  padding-top:14px!important;
+  padding-bottom:14px!important;
+  margin-top:28px!important;
+  margin-bottom:16px!important;
+}
 .capsule-how h2{color:#004db3;font-weight:700}
+.white-tail{background-color:#ffffff!important;background:#ffffff!important}
+.white-tail.compare{background-color:#ffffff!important}
+.compare-heading{
+  color:#004db3;
+  font-weight:700;
+  margin-top:32px!important;
+  padding-top:20px!important;
+  margin-bottom:16px;
+}
+.testimonials-grid-title{
+  margin-top:28px!important;
+  margin-bottom:12px!important;
+}
 .profile-frame .doctor__wrap{gap:20px;align-items:flex-start}
 .profile-frame .story-ba{width:100%;max-width:320px;height:auto;display:block;margin:0;min-width:0;border-radius:6px}
 .profile-frame .doctor-text.text-rail{margin:0}
@@ -211,11 +232,12 @@ section p{
   font-size:19px;
 }
 .urgency{
-  background:#edf7fc!important;
+  background:#ffffff!important;
   box-shadow:none!important;
   border-radius:0!important;
   overflow:visible!important;
 }
+.urgency.white-tail{background-color:#ffffff!important}
 .cta-box{
   background-color:#ffffff;
   border-radius:12px;
